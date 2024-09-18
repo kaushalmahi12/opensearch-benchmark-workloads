@@ -37,6 +37,10 @@
     {
       "name": "range",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "query": {
           "range": {
@@ -51,6 +55,10 @@
     {
       "name": "distance_amount_agg",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -85,6 +93,10 @@
     {
       "name": "autohisto_agg",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -109,6 +121,10 @@
     {
       "name": "date_histogram_agg",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -133,6 +149,10 @@
     {
       "name": "date_histogram_calendar_interval",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -156,6 +176,10 @@
     {
       "name": "date_histogram_calendar_interval_with_tz",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -180,6 +204,10 @@
     {
       "name": "date_histogram_fixed_interval",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -203,6 +231,10 @@
     {
       "name": "date_histogram_fixed_interval_with_tz",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -227,6 +259,10 @@
     {
       "name": "date_histogram_fixed_interval_with_metrics",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -255,6 +291,10 @@
     {
       "name": "auto_date_histogram",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -278,6 +318,10 @@
     {
       "name": "auto_date_histogram_with_tz",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -302,6 +346,10 @@
     {
       "name": "auto_date_histogram_with_metrics",
       "operation-type": "search",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "size": 0,
         "query": {
@@ -331,6 +379,10 @@
       "name": "desc_sort_tip_amount",
       "operation-type": "search",
       "index": "nyc_taxis",
+      "headers": {
+        "content-type": "application/json",
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "query": {
           "match_all": {}
@@ -344,6 +396,10 @@
       "name": "asc_sort_tip_amount",
       "operation-type": "search",
       "index": "nyc_taxis",
+      "headers": {
+            "content-type": "application/json",
+            "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+      },
       "body": {
         "query": {
           "match_all": {}
