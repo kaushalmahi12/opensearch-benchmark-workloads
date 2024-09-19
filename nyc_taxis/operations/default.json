@@ -39,7 +39,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "query": {
@@ -57,7 +57,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -95,7 +95,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -123,7 +123,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -151,7 +151,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -178,7 +178,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -206,7 +206,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -233,7 +233,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -261,7 +261,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -293,7 +293,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -320,7 +320,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -348,7 +348,7 @@
       "operation-type": "search",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "size": 0,
@@ -381,7 +381,7 @@
       "index": "nyc_taxis",
       "headers": {
         "content-type": "application/json",
-        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+        "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "query": {
@@ -398,7 +398,7 @@
       "index": "nyc_taxis",
       "headers": {
             "content-type": "application/json",
-            "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") }}
+            "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
       },
       "body": {
         "query": {
