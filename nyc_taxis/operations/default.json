@@ -28,6 +28,10 @@
     {
       "name": "default",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "match_all": {}
