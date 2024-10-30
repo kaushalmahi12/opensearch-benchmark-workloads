@@ -8,6 +8,10 @@
       "name": "default",
       "operation-type": "search",
       "index": "{{index_name | default('big5')}}",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "match_all": {}
@@ -19,6 +23,10 @@
       "operation-type": "search",
       "index": "{{index_name | default('big5')}}",
       "request-timeout": 7200,
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "term": {

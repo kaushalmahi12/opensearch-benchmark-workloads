@@ -17,6 +17,10 @@
     {
       "name": "default",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "match_all": {}
@@ -26,6 +30,10 @@
     {
       "name": "term",
       "operation-type": "search",
+      "headers": {
+      "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "term": {
@@ -37,6 +45,10 @@
     {
       "name": "phrase",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "match_phrase": {
@@ -48,6 +60,10 @@
     {
       "name": "country_agg_uncached",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "size": 0,
         "aggs": {
@@ -70,6 +86,10 @@
       "name": "country_agg_cached",
       "operation-type": "search",
       "cache": true,
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "size": 0,
         "aggs": {
@@ -93,6 +113,10 @@
       "operation-type": "search",
       "pages": 25,
       "results-per-page": 1000,
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "match_all": {}
@@ -102,6 +126,10 @@
     {
       "name": "expression",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "function_score": {
@@ -125,6 +153,10 @@
     {
       "name": "painless_static",
       "operation-type": "search",
+      "headers": {
+      "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "function_score": {
@@ -148,6 +180,10 @@
     {
       "name": "painless_dynamic",
       "operation-type": "search",
+      "headers": {
+      "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "function_score": {
@@ -171,6 +207,10 @@
     {
       "name": "decay_geo_gauss_function_score",
       "operation-type": "search",
+      "headers": {
+      "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "function_score": {
@@ -192,6 +232,10 @@
    {
       "name": "decay_geo_gauss_script_score",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "script_score": {
@@ -214,6 +258,10 @@
     {
       "name": "field_value_function_score",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "function_score": {
@@ -232,6 +280,10 @@
     {
       "name": "field_value_script_score",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "script_score": {
@@ -248,21 +300,37 @@
     {
       "name": "large_terms",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "param-source": "pure-terms-query-source"
     },
     {
       "name": "large_filtered_terms",
       "operation-type": "search",
+      "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "param-source": "filtered-terms-query-source"
     },
     {
       "name": "large_prohibited_terms",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "operation-type": "search",
       "param-source": "prohibited-terms-query-source"
     },
     {
       "name": "desc_sort_population",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "match_all": {}
@@ -275,6 +343,10 @@
     {
       "name": "asc_sort_population",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "match_all": {}
@@ -287,6 +359,10 @@
     {
       "name": "asc_sort_with_after_population",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "match_all": {}
@@ -300,6 +376,10 @@
     {
       "name": "desc_sort_geonameid",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "match_all": {}
@@ -312,6 +392,10 @@
     {
       "name": "desc_sort_with_after_geonameid",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "track_total_hits": false,
         "query": {
@@ -326,6 +410,10 @@
     {
       "name": "asc_sort_geonameid",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "query": {
           "match_all": {}
@@ -338,6 +426,10 @@
     {
       "name": "asc_sort_with_after_geonameid",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "track_total_hits": false,
         "query": {
@@ -352,6 +444,10 @@
     {
       "name": "significant_text_selective",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "size": 0,
         "query": {
@@ -371,6 +467,10 @@
     {
       "name": "significant_text_sampled_selective",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "size": 0,
         "query": {
@@ -397,6 +497,10 @@
     {
       "name": "significant_text_unselective",
       "operation-type": "search",
+      "headers": {
+      "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "size": 0,
         "query": {
@@ -416,6 +520,10 @@
     {
       "name": "significant_text_sampled_unselective",
       "operation-type": "search",
+    "headers": {
+    "content-type": "application/json",
+    "queryGroupId": {{ queryGroupId | default("DEFAULT_QUERY_GROUP_ID") | tojson }}
+    },
       "body": {
         "size": 0,
         "query": {
